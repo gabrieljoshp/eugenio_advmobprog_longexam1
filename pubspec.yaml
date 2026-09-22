@@ -1,0 +1,35 @@
+name: eugenio_advmobprog_longexam1
+description: "Flutter Long Exam 1 - Facebook Clone"
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  cached_network_image: ^3.4.1
+  carousel_slider: ^5.1.1
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.3
+  flutter_dotenv: ^6.0.1
+  http: ^1.6.0
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: Klavika
+      fonts:
+        - asset: assets/fonts/KlavikaBoldBold.otf
+    - family: Frutiger
+      fonts:
+        - asset: assets/fonts/FrutigerLTStd-Roman.otf
+  uses-material-design: true
