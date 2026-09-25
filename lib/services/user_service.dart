@@ -23,6 +23,14 @@ class UserService {
     return user;
   }
 
+  Future<User> getUserById(int userId) async {
+    final response = await http.get(Uri.parse('$host/users/$userId'));
+    if (response.statusCode != 200) {
+      throw Exception('Failed to load post author');
+    }
+    return User.fromJson(jsonDecode(response.body));
+  }
+
   Future<void> saveUser(User user) async {
     final preferences = await SharedPreferences.getInstance();
     await preferences.setString(_userKey, jsonEncode(user.toJson()));
